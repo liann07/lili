@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Arial', sans-serif;
+}
+
+body {
+background: linear-gradient(135deg, #e3f2ff, #a8d2f8 55%, #6fb1f0);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #12366b;
+}
+
+.login-container {
+background-image: ("C:\Users\Admin\Pictures\login.jpg");
+background-size: cover;
+background-position: center;
+position: relative;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.login-box {
+background-color: rgba(255, 255, 255, 0.5);
+border: 1px solid rgba(255, 255, 255, 0.8);
+padding: 45px 40px;
+border-radius: 18px;
+backdrop-filter: blur(10px);
+box-shadow: 0 10px 30px rgba(40, 110, 200, 0.25);
+width: 370px;
+max-width: 92vw;
+text-align: center;
+}
+
+h2 {
+font-size: 28px;
+margin-bottom: 24px;
+}
+
+.input-group {
+margin-bottom: 22px;
+}
+
+.input-group label {
+text-align: left;
+display: block;
+margin-bottom: 5px;
+}
+
+.input-group input {
+width: 100%;
+padding: 12px;
+border-radius: 6px;
+border: none;
+font-size: 16px;
+background-color: rgba(255, 255, 255, 0.75);
+color: #12366b;
+text-align: left;
+}
+
+button {
+width: 100%;
+padding: 12px;
+background-color: #2f80ed;
+border: none;
+border-radius: 5px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+font-size: 17px;
+}
+
+button:hover {
+background-color: #1f6bd6;
+}
+
+.footer {
+margin-top: 20px;
+}
+
+.footer a {
+color: #1459b8;
+text-decoration: none;
+}
+
+.footer a:hover {
+text-decoration: underline;
+}
+
+.footer p {
+margin-top: 10px;
+}
+
+.remember-me {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.remember-me input {
+margin-right: 10px;
+}
+
+.password-wrap {
+position: relative;
+}
+
+.password-wrap input {
+padding-right: 42px;
+}
+
+.toggle-password {
+position: absolute;
+right: 6px;
+top: 50%;
+transform: translateY(-50%);
+width: auto;
+padding: 4px;
+background: none;
+color: #1459b8;
+line-height: 0;
+}
+
+.toggle-password:hover {
+background: none;
+color: #12366b;
+}
+
+.toggle-password svg {
+width: 20px;
+height: 20px;
+}
+
+.toggle-password .slash {
+display: none;
+}
+
+.toggle-password.showing .slash {
+display: inline;
+}
+</style>
+</head>
+<body>
+<div class="login-container">
+<div class="login-box">
+<h2>Login</h2>
+<form>
+<div class="input-group">
+<label for="username"><i class="user"></i> Username</label>
+<input type="text" id="username" placeholder="Username">
+</div>
+<div class="input-group">
+<label for="password"><i class="lock"></i> Password</label>
+<div class="password-wrap">
+<input type="password" id="password" placeholder="Password">
+<button type="button" class="toggle-password" aria-label="Show or hide password" onclick="var p=document.getElementById('password');var show=p.type==='password';p.type=show?'text':'password';this.classList.toggle('showing',show);">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/><line class="slash" x1="3" y1="3" x2="21" y2="21"/></svg>
+</button>
+</div>
+</div>
+<div class="remember-me">
+<input type="checkbox" id="remember">
+<label for="remember">Remember me</label>
+</div>
+<button type="submit">Login</button>
+<div class="footer">
+<a href="#">Forgot Password?</a>
+<p>Don't have an account?<a href="#"></a></p>
+<p>Register</p>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
